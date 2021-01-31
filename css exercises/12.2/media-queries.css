@@ -1,0 +1,12 @@
+@media only screen and (min-width: 480px) {
+  p {
+    display: block;
+  }
+}
+@media only screen and (min-width: 768px) {
+  p {
+    display: inline-block;
+    width: 24vw;
+    height: 100vh;
+  }
+}
