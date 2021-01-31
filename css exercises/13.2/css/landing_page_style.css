@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  color: #1b351c;
+}
+.showcase {
+  background: url("/img/dandelion-445228_1280.webp") center;
+  background-size: cover;
+  height: 100vh;
+}
