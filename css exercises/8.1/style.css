@@ -1,0 +1,69 @@
+body{
+  background-color: midnightblue;
+  color: aliceblue;
+  text-align: center;  
+  width: 100%;
+}
+
+
+button{
+  color: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  margin-right: 10px;
+}
+button:first-of-type{
+  padding: 5px;
+}
+button:nth-of-type(2){
+  padding: 2.5px;
+}
+.b_group_2,.b_group_4{
+  border-radius: 8px;
+}
+
+
+#a1{
+  background-color: green;
+  border:none;
+}
+#b1{
+  background-color: red;
+  border: none;
+}
+#c1{
+  background-color: royalblue;
+  border: none;
+}
+#a2{
+  background-color: orange;
+  border:none;
+}
+#b2{
+  background-color: rgb(236, 198, 24);
+  border:none;
+}
+#c2{
+  background-color: grey;
+  border:none;
+}
+#a3{
+  border: solid 2px green;
+}
+#b3{
+  border:solid 2px red
+}
+#c3{
+  border-color: blue;
+}
+#a4{
+  border-color: orange;
+}
+#b4{
+  border-color: yellow;
+
+}
+#c4{
+  border-color: grey;
+
+}

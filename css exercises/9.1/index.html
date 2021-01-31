@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner"></div>
+  </div>
+</body>
+</html>
+
+<!-- answers:
+1. the problem was that even though we used "position: absolute" for the inner class, it's position wasn't relative to the outer father class, and it was above it. instead, it was only relative to the whole page - the body.
+2. to fix this code, I just made the father's position "fixed", so now the inner square is on the inner one, and is moving relatively to hit, and not to the body.
+reference: https://www.w3schools.com/css/css_positioning.asp 
+ -->

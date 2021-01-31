@@ -1,0 +1,28 @@
+div{
+  position: absolute;
+  border: 1px solid black;
+  background-color: white;
+}
+#div_one{
+  width: 100px;
+  height: 100px;
+}
+#div_two{
+  width: 90px;
+  height: 90px;
+  top: 80px;
+  left: 60px;
+  z-index: 1;
+}
+#div_three{
+  width: 200px;
+  height: 60px;
+  top: 150px;
+  z-index: 2;
+}
+#div_four{
+  width: 50px;
+  height: 300px;
+  left: 180px;
+  z-index: 3;
+}

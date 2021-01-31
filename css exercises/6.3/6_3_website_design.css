@@ -1,0 +1,28 @@
+body{
+
+  background-image:url(/images/pexels-henry-&-co-1939485.jpg);
+}
+.header{
+  font-family: 'Oswald', sans-serif;
+  color: darkblue;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  text-align: center;
+}
+#footer-nav{
+  font-family: 'Hachi Maru Pop', cursive;
+  color: rgb(39, 39, 31);
+}
+img{
+  width: 100%;
+  height: fit-content;
+  max-width: 500px;
+  max-height: 300px;
+}

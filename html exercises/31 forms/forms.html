@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<body>
+  <h1>Create an account</h1>
+  <form action="process.php"></form>
+  <!-- email input, used a placeholder for conveniance -->
+  <div>
+    <label for="email">Email:</label><br>
+    <input type="email" name="email" id="email" placeholder="enter an email">
+  </div><br>
+  <!-- password input -->
+  <div>
+    <label for="pwd">Password:</label><br>
+    <input type="password" name="pwd" id="pwd">
+  </div><br>
+  <!-- age number input -->
+  <div>
+    <label for="age">Age:</label><br>
+    <input type="number" name="age" id="age">
+  </div><br>
+  <!-- message input -->
+  <div>
+    <label for="message">Tell us a litle about yourself:</label><br>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+  </div><br>
+  <!-- checkbox for the consent statement -->
+  <div>
+    <label for="consent">I agree to the <a href="#">terms of service</a></label>
+  </div><br>
+  <!-- submit button -->
+  <div>
+    <button type="submit">Sign up</button>
+  </div><br>
+
+</body>
+</html>

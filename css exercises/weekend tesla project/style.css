@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Gotham Book";
+  src: url("https://www.example.com/assets/fonts/Gotham-Book.eot"),
+    url("https://www.example.com/assets/fonts/Gotham-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.example.com/assets/fonts/Gotham-Book.woff2")
+      format("woff2"),
+    url("https://www.example.com/assets/fonts/Gotham-Book.woff") format("woff"),
+    url("https://www.example.com/assets/fonts/Gotham-Book.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* main styling */
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  background: no-repeat center url(img/model\ 3.jpg);
+  background-size: 100% 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 17.5px;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#model-name {
+  margin: 10px 0;
+}
+/* navbar styling */
+#navbar {
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font: medium;
+  font-size: 14px;
+  overflow: auto;
+}
+#navbar a {
+  color: #ffffff;
+}
+#navbar h1 {
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+#navbar ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  float: left;
+}
+#navbar ul li a {
+  display: block;
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 320px;
+  line-height: 3.6em;
+  visibility: hidden;
+  float: right;
+  z-index: 1;
+}
+/* hiding scrollbar. */
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu .side-menu-list {
+  background-color: #ffffff;
+  list-style: none;
+  text-align: left;
+}
+.menu .side-menu-list li {
+  margin: 0 20px;
+  border-bottom: solid thin grey;
+  padding: 0px 20px;
+}
+#first-list-item {
+  padding-top: 50px;
+}
+.menu .side-menu-list a {
+  font-weight: 600;
+  color: initial;
+  margin: auto;
+  padding: 20px 10px;
+  font-size: 14px;
+}
+#close {
+  position: absolute;
+  color: #000000;
+  font-size: 2em;
+  top: 0;
+  right: 10px;
+}
+.toggle {
+  float: right;
+  position: relative;
+  top: -38px;
+  right: 10px;
+  cursor: pointer;
+  width: 19px;
+  height: 19px;
+  opacity: 0;
+  z-index: 3;
+}
+
+.toggle:checked ~ .menu {
+  visibility: visible;
+}
+
+#hamburger {
+  float: right;
+  position: relative;
+  top: -43px;
+  right: -10px;
+  z-index: 0;
+}
+
+#hamburger div {
+  width: 20px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+#model-name p {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 48px;
+  padding-right: 200px;
+  position: relative;
+  text-align: center;
+  top: 20%;
+}
+
+#spacing {
+  padding-left: 70px;
+}
+.tech-specs {
+  position: absolute;
+  width: 55%;
+  height: 12%;
+  top: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #ffffff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font: medium;
+  font-size: 14px;
+  overflow: auto;
+  overflow: hidden;
+}
+.tech-specs ul {
+  height: 100%;
+}
+.tech-specs li {
+  height: 100%;
+}
+.icon-container {
+  position: absolute;
+  margin: auto;
+  top: 10px;
+  left: 40px;
+  color: floralwhite;
+  width: auto;
+  height: 30%;
+  display: inline-block;
+}
+.icon-container::after {
+  content: "";
+  background: url(image.jpg);
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.icon-container + p {
+  font-size: 20px;
+  position: relative;
+  color: #ffffff;
+  display: inline-block;
+  left: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#first-spec,
+#second-spec {
+  border-right: thin solid #ffffff;
+}
+.specs {
+  width: 24%;
+  position: relative;
+  font-size: 28px;
+  line-height: 36px;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+}
+.order-button {
+  position: relative;
+  color: inherit;
+  font-size: 14px;
+  font-family: gotham medium;
+  background: transparent;
+  padding: 10px 30px;
+  border: #ffffff solid 3px;
+  border-radius: 20px;
+  display: inherit;
+  top: 10px;
+}
+.order-button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+#first-spec #speed {
+  line-height: inherit;
+  font-size: inherit;
+  display: inherit;
+}
+.bottom-line {
+  position: absolute;
+  text-align: center;
+  top: 40px;
+  left: 0px;
+  font-size: small;
+  line-height: 15px;
+  margin: auto;
+  width: 100%;
+  display: inline-block;
+}
+.last {
+  left: 75px;
+}

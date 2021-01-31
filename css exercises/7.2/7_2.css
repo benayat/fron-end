@@ -1,0 +1,52 @@
+/* changes I made refactoring this page:
+I put both cards side by side, using float. (and of course clear after)
+I added margins where it was necessary(for example - footer buttons. I moved them to the right.
+added just a little bit of padding(it doesn't seem necessary to me, but just for the exercise. */
+
+body{
+  background-image:url(/images/pexels-henry-&-co-1939485.jpg);
+}
+.header{
+  font-family: 'Oswald', sans-serif;
+  color: darkblue;
+  padding: 20px, 10px, 20px, 10px;
+}
+*{
+  box-sizing: border-box;
+}
+.clr{
+  clear: both;
+}
+.card{
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 43%;
+  margin: 5px;
+}
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  text-align: center;
+}
+#profile_card{
+  float: left;
+}
+#bike_card{
+  float: right;
+}
+
+#footer-nav{
+  margin-left: 10px;
+  font-family: 'Hachi Maru Pop', cursive;
+  color: rgb(39, 39, 31);
+}
+img{
+  width: 100%;
+  height: fit-content;
+  max-width: 550px;
+  max-height: 300px;
+}
+button{
+  background-color: aquamarine;
+}
