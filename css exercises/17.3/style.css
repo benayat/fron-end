@@ -1,0 +1,21 @@
+.box {
+  background-color: red;
+  top: 0px;
+  left: 31vw;
+  height: 30vw;
+  width: 30vw;
+  position: relative;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  background-color: purple;
+  height: 30vw;
+  width: 15vw;
+  top: 0;
+  left: 0;
+}
+
+.box:hover::after {
+  background-color: blue;
+}
