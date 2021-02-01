@@ -1,0 +1,19 @@
+.box {
+  background-color: purple;
+  top: 0px;
+  left: 0px;
+  height: 30vw;
+  width: 30vw;
+  position: relative;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 60vw;
+  background: red;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
