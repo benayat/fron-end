@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  /* this if for the second exercise: */
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+.box {
+  width: 10vw;
+  height: 10vh;
+}
+#box1 {
+  background-color: green;
+}
+#box2 {
+  background-color: blue;
+}
+#box3 {
+  background-color: red;
+}
