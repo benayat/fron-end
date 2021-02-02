@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.spinner {
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.spinner-1 {
+  border: 0.5rem grey solid;
+  border-top: 0.5rem green solid;
+}
+.spinner-2 {
+  border: 0.5rem solid black;
+  border-top: 0.5rem green solid;
+  border-right: 0.5rem solid rgba(0, 128, 0, 0.5);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.light {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: green;
+  position: relative;
+}
+/* 
+a great idea I took from somewere - instead of thinking about a delay each iteration, just make some "empty" steps.
+*/
+
+.trafic-light-1 {
+  background-color: grey;
+  animation: flick 3s linear infinite;
+  animation-delay: 1s;
+}
+.trafic-light-1::before {
+  content: "";
+  position: absolute;
+  left: 3rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: grey;
+  animation: flick 3s linear infinite;
+  animation-delay: 2s;
+}
+
+.trafic-light-1::after {
+  content: "";
+  position: absolute;
+  right: 3rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: grey;
+  animation: flick 3s linear infinite;
+}
+
+@keyframes flick {
+  0% {
+    background-color: grey;
+  }
+  33.3333333333% {
+    background-color: green;
+  }
+  66.6666666667% {
+    background-color: grey;
+  }
+  100% {
+    background-color: grey;
+  }
+}
+/* now, here is a different challenge. the position is always relative to the father even during animation. hence, we need to move them acordingly. */
+
+.trafic-light-2 {
+  background-color: green;
+  position: relative;
+  animation: translateY 3s infinite linear;
+}
+.trafic-light-2::before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  left: 3rem;
+  border-radius: 50%;
+  background-color: green;
+  animation: translateY-right 3s infinite linear;
+}
+.trafic-light-2::after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  right: 3rem;
+  border-radius: 50%;
+  background-color: green;
+  animation: translateY-left 3s infinite linear;
+}
+
+@keyframes translateY-left {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2rem);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes translateY-right {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2rem);
+  }
+  75% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes translateY {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
