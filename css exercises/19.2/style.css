@@ -19,9 +19,12 @@
   height: 100%;
   width: 100%;
   top: 0;
+  /* transition-property:; */
   transition-duration: 2s;
-  /* z-index: -1; */
+  transform: translateX(100%);
+  z-index: -1;
 }
 .box:hover::after {
-  transform: translateX(20vw);
+  transform: translateX(-100%);
+  background-color: sienna;
 }
