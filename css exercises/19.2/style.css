@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box {
+  background: red;
+  position: relative;
+  height: 20vw;
+  width: 20vw;
+  /* top: 0;
+  left: 0; */
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  background: royalblue;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  transition-duration: 2s;
+  /* z-index: -1; */
+}
+.box:hover::after {
+  transform: translateX(20vw);
+}
