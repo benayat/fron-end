@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hover-over-me {
+  color: blue;
+  position: relative;
+}
+.hover-over-me:hover::before {
+  content: "best tooltip ever!";
+  position: absolute;
+  font-size: 0.7rem;
+  top: -2.5rem;
+  right: 0;
+  text-align: center;
+  width: max-content;
+  border-radius: 1rem;
+  background: yellow;
+  padding: 0.5rem;
+  border: 2px yellow;
+}
+/* the trick is to make all borders transparent besides one. */
+.hover-over-me:hover::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  right: 0.5rem;
+  border: transparent 0.5rem solid;
+  border-top: yellow 1rem solid;
+}
