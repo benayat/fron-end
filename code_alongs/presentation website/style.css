@@ -1,0 +1,8 @@
+:root{
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --animate-speed: 1s;
+}
+body{
+  font-family: Arial
+}
