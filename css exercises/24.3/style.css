@@ -1,38 +1,70 @@
-:root {
+/* :root {
   box-sizing: border-box;
-}
-.container {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "sidebar content sidebar2"
-    "";
+} */
+body {
+  color: white;
 }
 
 .box {
-  padding: 3rem 3rem;
   border-radius: 1rem;
+}
+h1,
+h2,
+p {
+  padding: 1rem 1rem;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
+@media (min-width: 769px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "sidebar content sidebar2"
+      "footer footer footer";
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 501px) {
+  .container {
+    grid-template-areas:
+      "header header"
+      "sidebar content"
+      "sidebar2 sidebar2"
+      "footer footer";
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "sidebar2"
+      "footer";
+  }
 }
 
 .box1 {
   background-color: red;
-  grid-column-start: 1;
-  grid-column-end: 5;
+  grid-area: header;
 }
 .box2 {
-  grid-column: 1 / span 2;
-  grid-row: 2 / span2;
+  grid-area: sidebar;
   background-color: blue;
 }
 .box3 {
-  grid-column: 3 / span 2;
+  grid-area: content;
   background-color: yellowgreen;
 }
 .box4 {
-  grid-column: 3 / span 1;
+  grid-area: sidebar2;
   background-color: purple;
 }
 .box5 {
-  grid-column: 4 / span 1;
-  background-color: purple;
+  grid-area: footer;
+  background-color: yellow;
 }
