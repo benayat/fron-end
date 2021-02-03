@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  color: orange;
+  background-color: palegreen;
+}
+
+.container {
+  position: absolute;
+  display: flex;
+}
+
+.container div {
+  padding: 0 0.3rem;
+}
+.smokey {
+  animation: smokey 6s linear infinite;
+  transform-origin: 150% 50%;
+}
+#first {
+  animation-delay: 0s;
+}
+#second {
+  animation-delay: 0.5s;
+}
+#third {
+  animation-delay: 1s;
+}
+#fourth {
+  animation-delay: 1.5s;
+}
+#fifth {
+  animation-delay: 2s;
+}
+#sixth {
+  animation-delay: 2.5s;
+}
+/* what we need to do: just translatey up and rotate right on the top right axis. we did something similar yesterday. */
+@keyframes smokey {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+  10% {
+    transform: translate(15rem, -10rem) rotate(75deg);
+    opacity: 0;
+    filter: blur(0.25rem);
+  }
+  50% {
+    transform: translate(15rem, -10rem) rotate(75deg);
+    opacity: 0;
+    filter: blur(0.25rem);
+  }
+  60% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
