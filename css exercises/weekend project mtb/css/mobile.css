@@ -1,0 +1,28 @@
+body {
+  height: 100%;
+  text-align: center;
+}
+.navbar {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: strech;
+  align-items: stretch;
+  position: inherit;
+  padding: 2rem 0;
+  justify-content: stretch;
+}
+.logo {
+  flex: 0;
+  justify-self: start;
+}
+.navbar ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.navbar a {
+  padding: 2rem 0;
+  font-size: 1.5rem;
+}
