@@ -1,0 +1,7 @@
+things I should do next: 
+- add flip animation to the images on hover - 360 degrees: just animate to transform: scaleX(-1) and then the oposite.
+down scale the quality of all the pictures to the current size on laptop 1080p - 1920*1080.
+
+maybe later: 
+- add a background story after each picture.
+- make all pages on the same html file for scrolling. (which is better? one or multiple pages?)
