@@ -37,6 +37,12 @@ body {
   object-fit: cover;
   box-shadow: 0 2px 16px var(--shadow);
 }
+.container img:hover {
+  transition: 1s;
+  /* -webkit-transform: scaleX(-1); */
+  transform: scaleX(-1);
+  transform: scaleX(1);
+}
 
 .image1 {
   grid-column: 1 / span 2;
