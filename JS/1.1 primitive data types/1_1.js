@@ -18,7 +18,7 @@ var nothin = null;
 var notYetDefined;
 
 var sym2 = Symbol("foo");
-var arr = [str, num, obj, bool, nothin, notYetDefined];
+var arr = [str, num, obj, bool, nothin, notYetDefined, sym2];
 
 for (i = 0; i < arr.length; i++) {
   console.log(typeof arr[i]);
