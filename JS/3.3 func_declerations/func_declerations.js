@@ -12,9 +12,11 @@ console.log(percentageOfWorld1(israel));
 console.log(percentageOfWorld1(US));
 console.log(percentageOfWorld1(UEA));
 
-const PopulationPercentage = function (population) {
-  return Math.round((population / 7900) * 10000) / 100 + "%";
-};
+// const PopulationPercentage = function (population) {
+//   return Math.round((population / 7900) * 10000) / 100 + "%";
+// };
+const PopulationPercentage = (population) =>
+  Math.round((population / 7900) * 10000) / 100 + "%";
 console.log(PopulationPercentage(israel));
 console.log(PopulationPercentage(US));
 console.log(PopulationPercentage(UEA));
