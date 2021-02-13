@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/benayat/front-end/issues"
   },
-  "homepage": "https://github.com/benayat/front-end#readme"
+  "homepage": "https://github.com/benayat/front-end#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
 }

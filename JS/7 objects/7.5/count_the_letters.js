@@ -1,4 +1,5 @@
 const reducer = (histogram, key) => {
+  // console.log(histogram);
   histogram[key] = (histogram[key] || 0) + 1;
   return histogram;
 };
