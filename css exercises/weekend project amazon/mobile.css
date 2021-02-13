@@ -1,0 +1,18 @@
+.country, .account-name, .returns, .address, .middle-right, .image-div, .benayas-amazon{
+  display: none;
+}
+.middle-navbar{
+  display: flex;
+  justify-content: stretch;
+}
+
+.middle-left{
+  display: flex;
+  justify-content: space-evenly;
+}
+.main-grid{
+  grid-template-columns: max-content 3fr 1fr;
+}
+.left_big_pictures{
+  display: none;
+}
