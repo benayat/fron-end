@@ -3,7 +3,7 @@ let obj1 = {};
 // const maxCount = 1000000;
 // console.time("My operation"); // <---- Starts the timer
 // for (let i = 0; i < maxCount; i++) {
-//   obj1[i] = { key: `value${i}` };
+//   obj1[i] = { i: `value${i}` };
 // }
 // console.timeEnd("My operation"); // <---- Stops the time
 
@@ -12,7 +12,7 @@ const myMap = new Map();
 const maxCount = 1000000;
 // console.time("My operation"); // <---- Starts the timer
 // for (let i = 0; i < maxCount; i++) {
-//   myMap[i] = { key: `value${i}` };
+//   myMap[i] = { i: `value${i}` };
 
 // }
 // console.timeEnd("My operation"); // <---- Stops the time
@@ -24,7 +24,7 @@ maybe the way I add it makes a difference...lets see:
 */
 console.time("My operation"); // <---- Starts the timer
 for (let i = 0; i < maxCount; i++) {
-  myMap.set("key", i);
+  myMap.set(i, "key");
   //Perform the operation to be measured multiple times
 }
 console.timeEnd("My operation"); // <---- Stops the time
