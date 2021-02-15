@@ -68,6 +68,7 @@ function arrangeFoods(data) {
     );
 }
 console.log(arrangeFoods(data));
+
 const array = data
   .map((object) => [
     ...object.favoriteFoods.meats,
