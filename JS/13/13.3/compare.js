@@ -9,6 +9,7 @@ function compare(array1, array2) {
       }
     }
   }
+  if (str === "") return false;
   return str;
 }
 console.log(compare(food, food1));
