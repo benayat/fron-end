@@ -8,6 +8,7 @@ function countOccurrences(str, char) {
   debugger;
   return counter;
 }
+
 countOccurrences("ini mini miny moe", "n");
 
 /* 
