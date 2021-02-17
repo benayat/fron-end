@@ -1,14 +1,13 @@
 //block 1:
-/* function funcA() {
-  var a = 1;
+function funcA() {
   console.log(a);
   console.log(foo());
-
+  var a = 1;
   function foo() {
     return 2;
   }
 }
-funcA(); */ //possible problems: same var name. in the same scope - functions. lets check.
+funcA(); // problem: a is not yet defined when its executed. only foo() is, because its a function so its hoisted up. fix: mox a asignment up.
 
 /* 
     notes before running: a is undefined, because only declerations and not initializations are hoisted to the top.
@@ -28,12 +27,10 @@ var obj = {
   },
 };
 console.log(obj.prop.getFullName());
-var test = obj.prop.getFullName;
+var test = obj.prop.getFullName; //undefined - because even though it has prop.fullname because of closure, it doesn't have this.
 console.log(test());
 
-//problems: none.
-//my mistake! the problem is that it returns undefined, since it cannot access this.fullname. I hope to get a better explanation that doesn't colide with closures.
-//thinking again: the function test has all the function get ful name, but not the related variables of the object, and so "this" now refers to nothing! so this.something is undefined.
+//thinking again: the function test has all the function get ful name,and the related variables of the object, but not "this". and so "this" now refers to nothing! so this.something is undefined.
 
 //code 3:
 function funcB() {
@@ -68,13 +65,10 @@ function funcD1() {
 funcD1();
 console.log(d);
 function funcD2() {
-  e = 1;
+  var e = 1;
 }
 funcD2();
 console.log(e); //e is only function scoped, so not available after the function. you can either call make it global, or return its value.
-
-//mixup in the scope. the first will just work, and because d is global, it's value will remain. in funcD2 - I think it will be the same.
-//check result: var is a function variable, so it's value it deleted after the function ends.  d however is totaly global, so its value stays.
 
 //block 6:
 
