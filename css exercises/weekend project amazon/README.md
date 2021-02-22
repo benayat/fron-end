@@ -107,7 +107,7 @@
         </ul>
       </div>
       <div class="left_big_pictures">
-        <img class = "the_big_picture" src="images/product-pictures/right-large/1.jpg" alt="1">
+        <img src="images/product-pictures/right-large/1.jpg" alt="1">
       </div>
     </section>
     <main class="item_description">
@@ -310,7 +310,6 @@
       </div>
     </div>
   </div>
-  <script src="left_pictures.js"></script>
 </body>
 
 
