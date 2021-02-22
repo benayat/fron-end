@@ -6,6 +6,8 @@ const answerArea = document.createElement("textarea");
 answerArea.classList.add("numberOfSmileys");
 answerArea.style.height = "1rem";
 answerArea.style.display = "inline";
+answerArea.style.position = "relative";
+answerArea.style.top = "6px";
 
 const submit = document.createElement("button");
 submit.classList.add("numberButton");
@@ -31,3 +33,15 @@ function handler(event) {
   }
 }
 submit.addEventListener("click", handler);
+
+
+function noMoreSearch(event) {
+  console.log("this one works");
+  console.log(event.key);
+  console.log(event.ctrlKey);
+  if (event.ctrlKey && event.key == "f") {
+    event.preventDefault();
+    alert("default behavior prevented");
+  }
+}
+window.addEventListener("keydown", noMoreSearch);
