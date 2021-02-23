@@ -30,6 +30,7 @@ function pasteAll(event) {
   for (let i = 0; i < paste.length; i++) {
     inputs[i].value = paste.charAt(i);
   }
+  submitButton.click();
 }
 let container = document.querySelector(".container");
 container.addEventListener("paste", pasteAll);
