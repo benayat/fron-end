@@ -30,12 +30,10 @@ function pasteAll(event) {
   for (let i = 0; i < paste.length; i++) {
     inputs[i].value = paste.charAt(i);
   }
-  submitButton.click();
 }
 let container = document.querySelector(".container");
 container.addEventListener("paste", pasteAll);
 let inputsContainer = container.querySelector(".inputsContainer");
-
 inputsContainer.addEventListener("click", (event) => {
   for (inputBox of inputs) {
     inputBox.value = "";
@@ -45,4 +43,5 @@ inputsContainer.addEventListener("click", (event) => {
 const firstInput = inputs[0];
 firstInput.addEventListener("paste", pasteAll);
 
-//second part:
+const allValues = [...inputs].every((input) => input.value);
+if (allValues) submitButton.click();
