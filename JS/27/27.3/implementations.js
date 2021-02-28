@@ -17,10 +17,24 @@ Array.prototype.findNew = function (callback, thisArg = false) {
   }
 };
 
-Array.prototype.reduceNew = function (reduceFunction, initialVaue = false) {
-  let accumulator;
+Array.prototype.reduceNew = function (reduceFunction, initialValue = false) {
+  let accumulator = initialValue ? initialValue : undefined;
   for (let i = 0; i < this.length; i += 1) {
-    accumulator += callback(accumulator, currentValue, index, array);
+    accumulator = callback(accumulator, currentValue, index, array);
+  }
+  return accumulator;
+};
+
+//*not there yet!!
+// need to get back to this.
+//if the accumulator is undefined, we call the function with
+Array.prototype.myReduce = function (callback, initialVal) {
+  let accumulator = initialVal === undefined ? undefined : initialVal;
+
+  for (var i = 0; i < this.length; i++) {
+    if (accumulator !== undefined)
+      accumulator = callback.call(undefined, accumulator, this[i], i, this);
+    else accumulator = this[i];
   }
   return accumulator;
 };
