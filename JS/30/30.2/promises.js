@@ -14,15 +14,16 @@ function makeAllCaps(arrayOfWords) {
 
 function sortWords(arrayOfWords) {
   return new Promise((resolve, reject) => {
-    console.log("sorting");
     arrayOfWords.sort();
     resolve(arrayOfWords);
   });
 }
-const array = ["want", "I", "this"];
-const arrayBroken = ["I", "am", "not", "a", "word", 2384];
+function handleError(message) {
+  console.log(message);
+}
+function printArray(array) {
+  console.log(array);
+}
+const arrayBroken = ["I", "am", "not", "a", "word"];
 
-makeAllCaps(arrayBroken)
-  .then((array) => sortWords(array))
-  .then((array) => console.log(array))
-  .catch((error) => console.log(error));
+makeAllCaps(arrayBroken).then(sortWords).then(printArray).catch(handleError);
