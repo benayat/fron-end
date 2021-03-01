@@ -1,5 +1,3 @@
-const { resolve } = require("path");
-
 function makeAllCaps(arrayOfWords) {
   return new Promise((resolve, reject) => {
     for (let i = 0; i < arrayOfWords.length; i++) {
