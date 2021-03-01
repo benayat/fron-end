@@ -46,3 +46,4 @@ function greaterThen300(value, index = false, array = false) {
 
 console.log(array.filterNew(greaterThen300));
 console.log(array.findNew(greaterThen300));
+console.log(array.findNew());
