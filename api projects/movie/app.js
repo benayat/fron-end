@@ -6,8 +6,6 @@ the following data displayed on the screen:
 3. Genre
 4. Year
 5. Plot
-
-
 */
 
 const key = 'http://www.omdbapi.com/?i=tt3896198&apikey=d071e2ed';
@@ -58,10 +56,6 @@ function applySearchBar() {
     }
   });
 }
-/* 
-
-
-*/
 
 function applyMovieHTML(MovieData) {
   const MovieHTML = `<div class = "Moviewrapper">
