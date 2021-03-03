@@ -18,8 +18,7 @@ async function getMovie(title) {
   if (response.ok === 'false') throw Error(fetchError);
   const data = await response.json();
   const movie = {
-    Movie_poster:
-      'https://m.media-amazon.com/images/M/MV5BMTgzNjI1MTQyMF5BMl5BanBnXkFtZTcwODgyNDk3NA@@._V1_SX300.jpg',
+    Movie_poster: data.Poster,
     Movie_title: data.Title,
     Genre: data.Genre,
     Year: data.Released.split(' ').slice(-1)[0],
@@ -66,7 +65,7 @@ function applySearchBar() {
 
 function applyMovieHTML(MovieData) {
   const MovieHTML = `<div class = "Moviewrapper">
-  <img src="${MovieData.Movie_poster}" alt="poster" style="width:100%">
+  <img src="${MovieData.Movie_poster}" alt="poster">
   <div class = "movie_data">
   <p>Movie title: ${MovieData.Movie_title}</p>
   <p>Genre: ${MovieData.Genre}</p>
