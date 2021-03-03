@@ -27,10 +27,14 @@ async function getMovie(title) {
     Director: data.Director,
     Actors: data.Actors,
     //ratings is an object
-    IMDB: data.imdbRating,
-    Rotten_Tomatoes: data.Ratings[1].Value,
-    Metascore: data.Metascore,
   };
+  movie.IMDB = data.imdbRating || 'not rated';
+  movie.Rotten_Tomatoes = data.Ratings.find(
+    (x) => x.Source === 'Rotten Tomatoes'
+  )
+    ? data.Ratings[1].Value
+    : 'not rated';
+  movie.Metascore = data.Metascore || 'not rated';
   return movie;
 }
 
