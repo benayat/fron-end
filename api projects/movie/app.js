@@ -57,18 +57,7 @@ function applySearchBar() {
 }
 /* 
 
-  const movie = {
-    Movie_poster:
-      'https://m.media-amazon.com/images/M/MV5BMTgzNjI1MTQyMF5BMl5BanBnXkFtZTcwODgyNDk3NA@@._V1_SX300.jpg',
-    Movie_title: data.Title,
-    Genre: data.Genre,
-    [Year]: data.Released.split(' ').slice(-1),
-    Plot: data.Plot,
-    Director: data.Director,
-    Actors: data.Actors,
-    //ratings is an object
-    rarings: Ratings,
-  };
+
 */
 
 function applyMovieHTML(MovieData) {
@@ -80,8 +69,6 @@ function applyMovieHTML(MovieData) {
   <p>Year: ${MovieData.Year}</p>
   <p>Plot: ${MovieData.Plot}</p>
   <p>Director: ${MovieData.Director}</p>
-  <p>Actors: ${MovieData.Actors}</p>
-  <p><img>: ${MovieData.Actors}</p>
   <p>Actors: ${MovieData.Actors}</p>
   <p>IMDB: ${MovieData.IMDB}</p>
   <p>Rotten tomatoes: ${MovieData.Rotten_Tomatoes}</p>
