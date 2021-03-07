@@ -107,6 +107,8 @@ async function cardClicked(card) {
   }
   if (card2) {
     if (card1.item(1) !== card2.item(1)) {
+      console.log(card);
+      console.log(elmPreviousCard);
       state.numberOfWrongGuesses++;
       container.removeEventListener(`click`, cardEvent);
       await wait(800);
