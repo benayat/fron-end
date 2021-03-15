@@ -1,0 +1,16 @@
+:root{
+  box-sizing: border-box;
+}
+
+img{
+  height: 10vh;
+  width: auto;
+}
+
+.cardWrapper{
+  border: thin solid black;
+  display: inline-block;
+  padding: 3vh 3vh;
+  margin: 2vh 2vh;
+  width: max-content;
+}
