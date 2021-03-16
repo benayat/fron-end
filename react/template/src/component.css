@@ -1,0 +1,16 @@
+.box{
+  position: absolute;
+  background-color: blue;
+  top: 40vh;
+  left: 40vw;
+  height: 10vh;
+  width: 10vh;
+  animation: 1s changeColor linear infinite;
+}
+
+
+@keyframes changeColor {
+  0% {background-color: blue;}
+  50% {background-color: red;}
+  100% {background-color: blue;}
+}
