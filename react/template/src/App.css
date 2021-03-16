@@ -1,0 +1,8 @@
+.container{
+  display: inline-block;
+  height:max-content;
+  width: max-content;
+  border: thick solid black;
+  background-color:  lightcoral;
+  margin: 5vh 5vh;
+}
