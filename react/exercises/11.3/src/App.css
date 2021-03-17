@@ -1,0 +1,10 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: max-content;
+  width: max-content;
+}
+.container > *{
+  margin: 1vh 1vh;
+}
