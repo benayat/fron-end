@@ -1,5 +1,19 @@
+import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import ChuckJokes from './ChuckJokes';
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const App = () => {
+  return (
+    <div className="buttonsBar">
+      <ChuckJokes />
+    </div>
+  );
+};
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

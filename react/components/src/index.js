@@ -1,13 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import faker from 'faker';
-import Box1 from './Box1';
+import Game from './Game';
+
 const App = () => {
-  return (
-    <div className="ui container comments">
-      <Box1 />
-    </div>
-  );
+  return [<Game />];
 };
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+ReactDOM.render(<App />, document.getElementById('root'));
