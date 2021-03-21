@@ -1,14 +1,9 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChuckJokes from './ChuckJokes';
-
+import data from './data';
+import DataManager from './DataManager';
 const App = () => {
-  return (
-    <div className="buttonsBar">
-      <ChuckJokes />
-    </div>
-  );
+  return <DataManager data={data} />;
 };
 
 ReactDOM.render(
