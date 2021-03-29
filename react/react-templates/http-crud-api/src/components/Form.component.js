@@ -10,18 +10,26 @@ class Form extends Component {
     id: '',
   };
   onChange(e) {
-    const text = e.target.value;
-    const URLCheck = new RegExp(/^http/);
-    if (URLCheck.test(text)) {
-      this.setState({ imageURL: text });
-    } else if (typeof text === 'number') {
-      this.setState({ id: text });
-    } else {
-      this.setState({ name: text });
+    const text = e.target.value,
+      type = e.target.name;
+    switch (type) {
+      case 'name':
+        this.setState({ name: text });
+        break;
+      case 'URL':
+        this.setState({ imageURL: text });
+        break;
+      case 'id':
+        this.setState({ id: text });
+        break;
+      default:
+        break;
     }
   }
 
-  onSubmit() {
+  onSubmit(event) {
+    event.preventDefault();
+
     switch (this.props.type) {
       case 'create':
         this.props.create(this.state.name, this.state.imageURL);

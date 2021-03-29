@@ -6,26 +6,26 @@ import React, { Component, Fragment } from 'react';
 class CreateMain extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = { nextId: 1 };
   }
   async create(name, imageURL) {
     try {
-      const response = await axios.put(
-        baseURL + 'ingredientList/' + this.state.nextId,
-        {
-          name: name,
-          imageURL: imageURL,
-        }
-      );
-      if (response.status !== 200) {
+      const URL = baseURL + 'ingredientList';
+      const response = await axios.post(URL, {
+        name: name,
+        imageURL: imageURL,
+      });
+      if (response.status !== 201) {
         throw Error('failed');
       }
+      console.log(response);
       const id = this.state.nextId + 1;
       const getResult = (
         await axios.get(baseURL + 'ingredientList/' + this.state.nextId)
       ).data;
       this.setState({ nextId: id });
-      this.props.location.onSubmit(getResult);
+      this.props.onSubmit(getResult);
     } catch (error) {
       console.error(error);
     }

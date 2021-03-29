@@ -9,7 +9,11 @@ class InputText extends Component {
     return (
       <label>
         {this.props.type}:
-        <input type="text" onChange={this.onChange.bind(this)} />
+        <input
+          type="text"
+          name={this.props.type}
+          onChange={this.onChange.bind(this)}
+        />
       </label>
     );
   }
