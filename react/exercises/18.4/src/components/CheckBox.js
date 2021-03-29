@@ -1,19 +1,19 @@
 // import { useState } from 'react';
 
-const InputText = (props) => {
+const CheckBox = (props) => {
   // let [value, setValue] = useState('');
   return (
-    <div>
-      <label key={props.name}>
+    <div key={props.name}>
+      <label>
         {props.name}
         <input
-          type="text"
           name={props.name}
-          value={props.value}
+          type="checkbox"
+          checked={props.checked}
           onChange={(e) => props.onChange(e)}
         />
       </label>
     </div>
   );
 };
-export default InputText;
+export default CheckBox;
