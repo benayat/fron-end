@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 const InputText = (props) => {
   // let [value, setValue] = useState('');
   return (
@@ -7,6 +9,7 @@ const InputText = (props) => {
         <input
           type="text"
           name={props.name}
+          ref={props.inputRef}
           value={props.value}
           onChange={(e) => props.onChange(e)}
         />
