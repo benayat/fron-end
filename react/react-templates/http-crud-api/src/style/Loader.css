@@ -1,0 +1,11 @@
+.loading{
+  width: max-content;
+  content: "\2126";
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading{
+  100%{
+    transform: rotate(360deg);
+  }
+}
