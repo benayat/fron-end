@@ -6,10 +6,14 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "eslint": "^7.23.0",
+    "face-api.js": "^0.22.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-loads": "^9.2.4",
     "react-lorem-ipsum": "^1.4.9",
     "react-scripts": "4.0.3",
+    "react-webcam": "^5.2.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -17,12 +21,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -35,5 +33,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

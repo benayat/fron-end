@@ -1,52 +1,63 @@
-import { useState } from 'react';
-import CheckBox from './CheckBox';
-import Button from './Button';
-const App = () => {
-  const initialStateValues = ['one', 'two', 'three', 'four', 'five'];
-  const initialStateChecked = [false, false, false, false, false];
-  let [values, setValues] = useState(initialStateValues);
-  let [checked, setChecked] = useState(initialStateChecked);
-
-  const onChange = (e) => {
-    const index = values.indexOf(e.target.name);
-    setChecked([
-      ...checked.slice(0, index),
-      e.target.checked,
-      ...checked.slice(index + 1),
-    ]);
+import React, { useEffect, useState } from 'react';
+import WebcamFeature from './WebcamFeature';
+import * as faceapi from 'face-api.js';
+import { renderToStaticMarkup } from 'react-dom/server';
+import Canvas from './CanvasResults';
+import profilePic from '../images/profilePic.jpg';
+import * as Loads from 'react-loads';
+const MODEL_URL = '../models';
+const App = (props) => {
+  const [capture, setCapture] = useState(null);
+  const [faceDescriptors, setFaceDescriptors] = useState(null);
+  const onCapture = (imageSrc) => {
+    setCapture(imageSrc);
   };
-
-  const onClick = (e) => {
-    switch (e.target.name) {
-      case 'delete': {
-        setValues(
-          values.filter((x, index) => {
-            return !checked[index];
-          })
-        );
-        setChecked(checked.filter((x) => !x));
-        break;
+  useEffect(() => {
+    const load = async () => {
+      await faceapi.loadSsdMobilenetv1Model(MODEL_URL);
+      await faceapi.loadFaceLandmarkModel(MODEL_URL);
+      await faceapi.loadFaceRecognitionModel(MODEL_URL);
+    };
+    load();
+  }, []);
+  useEffect(() => {
+    if()
+    const detectFaces = async (input) => {
+      let fullFaceDescriptions = await faceapi
+        .detectAllFaces(input)
+        .withFaceLandmarks()
+        .withFaceDescriptors();
+    };
+    const profileImage = document.createElement('img');
+    profileImage.src = profilePic;
+    profileImage.alt = 'profile';
+    detectFaces(profileImage);
+  }, [profilePic]);
+  useEffect(() => {
+    const imgDom = document.createElement('img');
+    imgDom.src = capture;
+    imgDom.alt = 'capture';
+    const detectFace = async (imgElement) => {
+      const fullFaceDescription = await faceapi
+        .detectSingleFace(imgElement)
+        .withFaceLandmarks()
+        .withFaceDescriptor();
+      if (!fullFaceDescription) {
+        throw new Error(`no faces detected for ${label}`);
       }
-      case 'reset': {
-        setValues(initialStateValues);
-        setChecked(initialStateChecked);
-        break;
-      }
-      default:
-        break;
-    }
-  };
-  const numbers = values.map((x, index) => {
-    return <CheckBox name={x} checked={checked[index]} onChange={onChange} />;
-  });
-  return [
+      const faceDescriptors = [fullFaceDescription.descriptor];
+      return new faceapi.LabeledFaceDescriptors('benaya', faceDescriptors);
+    };
+    const descriptors = detectFace(imgDom);
+    console.log(descriptors);
+    setFaceDescriptors(descriptors);
+  }, capture);
+  return (
     <div>
-      <div key="buttons">
-        <Button name="delete" onClick={onClick} />
-        <Button name="reset" onClick={onClick} />
-      </div>
-      <div key="checkboxes">{numbers}</div>
-    </div>,
-  ];
+      <WebcamFeature onCapture={onCapture} />
+      <Canvas />
+    </div>
+  );
 };
+
 export default App;
