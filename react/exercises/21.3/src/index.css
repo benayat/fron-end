@@ -1,0 +1,11 @@
+:root{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.buttonBar{
+  display: flex;
+  justify-content:center;
+  width: 100vw;
+}
