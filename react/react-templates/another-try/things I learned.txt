@@ -1,0 +1,5 @@
+react automatically goes to public directory by default:
+- if you provide src for image html element - src='/logo.png', it will search it first in public folder.
+- faceapi - could'nt load models at first, but when I understood how to load models: by using 
+  the same method, relying on public and load with '/models', and I had to put models in the public directory.
+  

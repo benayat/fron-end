@@ -1,15 +1,7 @@
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChuckJokes from './ChuckJokes';
-
-const App = () => {
-  return (
-    <div className="buttonsBar">
-      <ChuckJokes />
-    </div>
-  );
-};
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>

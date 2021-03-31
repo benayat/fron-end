@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import InputText from './InputText';
 import Loader from './Loader';
 const App = () => {
